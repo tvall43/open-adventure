@@ -1,14 +1,14 @@
 # Makefile for the open-source release of adventure 2.5
 
 CCFLAGS=-std=c99
-LIBS=-lrt
-UNAME_S := $(shell uname -s)
-GCCVERSIONGTEQ4 := $(shell expr `gcc -dumpversion | cut -f1 -d.` \>= 4)
-ifeq ($(UNAME_S),Darwin)
-	LIBS=
-else ifeq "$(GCCVERSIONGTEQ4)" "1"
-	CC=c99
-endif
+#LIBS=-lrt
+#UNAME_S := $(shell uname -s)
+#GCCVERSIONGTEQ4 := $(shell expr `gcc -dumpversion | cut -f1 -d.` \>= 4)
+#ifeq ($(UNAME_S),Darwin)
+#	LIBS=
+#else ifeq "$(GCCVERSIONGTEQ4)" "1"
+	CC=gcc -std=c99
+#endif
 
 OBJS=main.o init.o actions1.o actions2.o score.o misc.o
 SOURCES=$(OBJS:.o=.c) COPYING NEWS README TODO adventure.text advent.text control misc.h main.h share.h funcs.h

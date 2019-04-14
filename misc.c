@@ -1006,10 +1006,10 @@ L30:	if(IN)IGNORE(fread(ARR,sizeof(long),250,F));
 
 
 void DATIME(long* D, long* T) {
-  struct timeval tv;
-  gettimeofday(&tv, NULL);
-  *D = (long) tv.tv_sec;
-  *T = (long) tv.tv_usec;
+  //struct timeval tv;
+  //gettimeofday(&tv, NULL);
+  //*D = (long) tv.tv_sec;
+  //*T = (long) tv.tv_usec;
 }
 long fIABS(N)long N; {return(N<0? -N : N);}
 long fMOD(N,M)long N, M; {return(N%M);}

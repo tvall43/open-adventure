@@ -6,7 +6,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <stdbool.h>
-#include <getopt.h>
+//#include <getopt.h>
 #include <signal.h>
 #include <time.h>
 #include "main.h"
@@ -77,7 +77,7 @@ int main(int argc, char *argv[]) {
 
 /*  Options. */
 
-	while ((ch = getopt(argc, argv, "l:o")) != EOF) {
+/*	while ((ch = getopt(argc, argv, "l:o")) != EOF) {
 		switch (ch) {
 		case 'l':
 			logfp = fopen(optarg, "w");
@@ -92,7 +92,7 @@ int main(int argc, char *argv[]) {
 		    break;
 		}
 	}
-
+*/
 /* Logical variables:
  *
  *  CLOSED says whether we're all the way closed
