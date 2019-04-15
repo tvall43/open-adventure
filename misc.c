@@ -1005,11 +1005,18 @@ L30:	if(IN)IGNORE(fread(ARR,sizeof(long),250,F));
 
 
 
+void DATIME(X,Y)long *X, *Y; {
+	time(X); time(Y);
+	*Y /= 2;
+	/* it would be even better if the two numbers were totally
+	 * unrelated, like if 'time' returned 64 bits of data */
+}
+/*
 void DATIME(long* D, long* T) {
   //struct timeval tv;
   //gettimeofday(&tv, NULL);
   //*D = (long) tv.tv_sec;
   //*T = (long) tv.tv_usec;
-}
+}*/
 long fIABS(N)long N; {return(N<0? -N : N);}
 long fMOD(N,M)long N, M; {return(N%M);}
