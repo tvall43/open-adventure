@@ -533,7 +533,7 @@ int main(int argc, char** argv)
   argc = argc;
   argv = argv;
 
-  FILE* database = fopen("adventure.txt", "r");
+  FILE* database = fopen("adventur.txt", "r");
   read_database(database);
   fclose(database);
 

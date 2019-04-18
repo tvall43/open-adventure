@@ -32,7 +32,7 @@ score.o:	misc.h main.h share.h database.h
 misc.o:		misc.h main.h database.h
 
 database.c database.h: compile
-	./compile
+	compile
 	$(CC) $(CCFLAGS) -O $(DBX) -c database.c
 
 clean:
